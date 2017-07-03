@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains newyork1_aboutus.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function newyork1_aboutus_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the newyork1_aboutus module.
+    case 'help.page.newyork1_aboutus':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('this is a module to add about me section to the website') . '</p>';
+      return $output;
+
+    default:
+  }
+}
