@@ -13,13 +13,13 @@ class DefaultController extends ControllerBase {
   /**
    * Getaboutmepage.
    *
-   * @return string
+   * @return array
    *   Return Hello string.
    */
   public function getAboutMePage() {
     return [
-      '#type' => 'markup',
-      '#markup' => $this->t('Implement method: getAboutMePage')
+      '#theme' => 'newyork1_aboutus',
+      '#title' => 'About Us'
     ];
   }
 

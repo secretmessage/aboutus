@@ -6,19 +6,17 @@
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\qbpl_volunteer\Controller;
 
 /**
  * Implements hook_help().
  */
-function newyork1_aboutus_help($route_name, RouteMatchInterface $route_match) {
-  switch ($route_name) {
-    // Main module help for the newyork1_aboutus module.
-    case 'help.page.newyork1_aboutus':
-      $output = '';
-      $output .= '<h3>' . t('About') . '</h3>';
-      $output .= '<p>' . t('this is a module to add about me section to the website') . '</p>';
-      return $output;
-
-    default:
-  }
+function newyork1_aboutus_theme($existing, $type, $theme, $path) {
+  return array(
+    'newyork1_aboutus' => array(
+      'variables' => array(
+        'apple' => NULL,
+     ),
+    ),
+  );
 }
