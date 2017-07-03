@@ -10,6 +10,7 @@ use Drupal\Core\Controller\ControllerBase;
  * @package Drupal\newyork1_aboutus\Controller
  */
 class DefaultController extends ControllerBase {
+
   /**
    * Getaboutmepage.
    *
@@ -19,7 +20,8 @@ class DefaultController extends ControllerBase {
   public function getAboutMePage() {
     return [
       '#theme' => 'newyork1_aboutus',
-      '#title' => 'About Us'
+      '#title' => 'About Us',
+      '#orgName' => 'New York One',
     ];
   }
 
